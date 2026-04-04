@@ -1,0 +1,115 @@
+<section class="contact-modern-section" style="padding: 80px 0; position: relative;">
+  <div class="container">
+    <div class="fade-in-up delay-1 text-center" style="margin-bottom: 4rem;">
+      <h2 class="section-title">Get in <span class="name-gradient">Touch</span></h2>
+      <p class="section-subtitle">Have a project in mind or just want to chat? Send me a message.</p>
+    </div>
+
+    <div class="contact-content" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start;">
+      
+      <!-- Contact Info -->
+      <div class="contact-info glass-panel fade-in-up delay-2" style="padding: 3rem;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #fff;">Contact Information</h3>
+        <p style="color: #94a3b8; margin-bottom: 2.5rem; line-height: 1.6;">
+          I'm currently open to new opportunities, freelance work, and interesting side projects. Feel free to reach out via email or any of the platforms below.
+        </p>
+
+        <div class="contact-details" style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;">
+          <div class="contact-item" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="contact-icon" style="font-size: 1.5rem; color: #06b6d4;">📧</div>
+            <div class="contact-text">
+              <h4 style="color: #64748b; font-size: 0.85rem; text-transform: uppercase;">Email</h4>
+              <p><a href="mailto:srahulkumar633@gmail.com" style="color: #e2e8f0; text-decoration: none;">srahulkumar633@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="contact-icon" style="font-size: 1.5rem; color: #a855f7;">📍</div>
+            <div class="contact-text">
+              <h4 style="color: #64748b; font-size: 0.85rem; text-transform: uppercase;">Location</h4>
+              <p style="color: #e2e8f0;">Bangalore, India</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-profiles">
+          <h4 style="color: #64748b; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 1rem;">Social Profiles</h4>
+          <div class="social-links" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/in/rahul-kumar-singh-6097b5147" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin" style="padding: 8px 16px;"><span class="btn-icon" style="color: #0ea5e9;">in</span> LinkedIn</a>
+            <a href="#" class="btn btn-github" style="padding: 8px 16px;"><span class="btn-icon">⚡</span> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form fade-in-up delay-3">
+        <div *ngIf="submitMessage" class="message" [ngClass]="{'success': submitMessageType === 'success', 'error': submitMessageType === 'error'}" style="padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; color: #10b981;">
+          {{ submitMessage }}
+        </div>
+
+        <form class="form glass-panel" (ngSubmit)="onSubmit()" style="padding: 3rem;">
+          <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: #fff;">Send a Message</h3>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label for="name" style="display: block; margin-bottom: 0.5rem; color: #94a3b8; font-size: 0.9rem;">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                [(ngModel)]="formData.name"
+                required
+                placeholder="John Doe"
+                style="width: 100%;">
+            </div>
+
+            <div class="form-group">
+              <label for="email" style="display: block; margin-bottom: 0.5rem; color: #94a3b8; font-size: 0.9rem;">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                [(ngModel)]="formData.email"
+                required
+                placeholder="john@example.com"
+                style="width: 100%;">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="subject" style="display: block; margin-bottom: 0.5rem; color: #94a3b8; font-size: 0.9rem;">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              [(ngModel)]="formData.subject"
+              required
+              placeholder="How can I help you?"
+              style="width: 100%;">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label for="message" style="display: block; margin-bottom: 0.5rem; color: #94a3b8; font-size: 0.9rem;">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              [(ngModel)]="formData.message"
+              rows="6"
+              required
+              placeholder="Write your message here..."
+              style="width: 100%; resize: vertical;"></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-github"
+            style="width: auto; padding: 12px 30px;"
+            [disabled]="isSubmitting">
+            <span *ngIf="!isSubmitting">Send Message</span>
+            <span *ngIf="isSubmitting">Sending...</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

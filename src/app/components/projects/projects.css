@@ -1,0 +1,40 @@
+/* =========================================================================
+   Projects Component Styles - Modern Design
+   ========================================================================= */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(6, 182, 212, 0.1);
+}
+
+.project-image-placeholder {
+  transition: all var(--transition-smooth);
+}
+
+.project-card:hover .project-image-placeholder {
+  filter: brightness(1.1);
+}
+
+/* Share pill styles from skills */
+.skill-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}

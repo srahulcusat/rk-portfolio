@@ -1,0 +1,13 @@
+.footer-minimal {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--dark-bg, #0a0f1e);
+  padding: 16px 0;
+  text-align: center;
+}
+
+.footer-minimal p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
