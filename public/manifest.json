@@ -1,0 +1,36 @@
+{
+  "name": "Rahul Kumar Singh | Portfolio",
+  "short_name": "RKS Portfolio",
+  "description": "Java Backend Developer — Spring Boot, Kafka, Cassandra, GCP",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050a15",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "assets/profile.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/profile.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer"],
+  "screenshots": [
+    {
+      "src": "assets/profile.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "RKS Portfolio Home"
+    }
+  ]
+}
