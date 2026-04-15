@@ -272,3 +272,25 @@ input:focus, textarea:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* =========================================================================
+   Global Responsive Adjustments
+   ========================================================================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

@@ -1,21 +1,22 @@
 <nav class="navbar">
   <div class="nav-container">
     <div class="nav-brand">
-      <a routerLink="/home">
-        <span class="brand-bracket">&lt;</span>
-        <span class="brand-name">Software Engineer</span>
-        <span class="brand-bracket">/&gt;</span>
+      <a routerLink="/home" (click)="closeMenu()" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+        <div style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%); color: #fff; width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: var(--font-sans); box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3); font-size: 1.1rem; letter-spacing: 1px;">
+          RK
+        </div>
+        <span style="color: var(--text-main); font-weight: 700; font-family: var(--font-sans); font-size: 1.3rem; letter-spacing: -0.5px;">Rahul <span style="font-weight: 400; color: var(--text-muted);">Singh</span></span>
       </a>
     </div>
-    <div class="nav-menu">
-      <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
-      <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
-      <a routerLink="/experience" routerLinkActive="active" class="nav-link">Experience</a>
-      <a routerLink="/skills" routerLinkActive="active" class="nav-link">Skills</a>
-      <a routerLink="/projects" routerLinkActive="active" class="nav-link">Projects</a>
-      <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
+    <div class="nav-menu" [class.active]="isMenuOpen">
+      <a routerLink="/home" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Home</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link" (click)="closeMenu()">About</a>
+      <a routerLink="/experience" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Experience</a>
+      <a routerLink="/skills" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Skills</a>
+      <a routerLink="/projects" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Projects</a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Contact</a>
     </div>
-    <div class="nav-toggle">
+    <div class="nav-toggle" [class.active]="isMenuOpen" (click)="toggleMenu()">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
