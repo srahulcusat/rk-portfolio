@@ -253,34 +253,40 @@
   font-size: 1.5rem;
 }
 
-/* Positioning the chips roughly around the circle */
+/* Positioning the chips evenly around the circle */
+.ai-chip {
+  top: 5%;
+  left: 50%;
+  animation-delay: 0.8s;
+}
+
 .java-chip {
-  top: 15%;
-  left: 85%;
+  top: 27.5%;
+  left: 89%;
   animation-delay: 0s;
 }
 
 .spring-chip {
-  top: 40%;
-  left: 95%;
+  top: 72.5%;
+  left: 89%;
   animation-delay: 1s;
 }
 
 .kafka-chip {
-  top: 65%;
-  left: 90%;
+  top: 95%;
+  left: 50%;
   animation-delay: 0.5s;
 }
 
 .redis-chip {
-  top: 85%;
-  left: 70%;
+  top: 72.5%;
+  left: 11%;
   animation-delay: 1.5s;
 }
 
 .gcp-chip {
-  top: 95%;
-  left: 40%;
+  top: 27.5%;
+  left: 11%;
   animation-delay: 0.2s;
 }
 
